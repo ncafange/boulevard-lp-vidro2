@@ -593,7 +593,9 @@ footer small{color:var(--muted);font-size:.75rem}
    Barra verde de conversão entre seções
 ════════════════════════════════════════ */
 .wa-banner{
-  background:linear-gradient(135deg,#1a7a42,#25d366);
+  background:linear-gradient(135deg,var(--g-dark),var(--g-mid));
+  border-top:1px solid rgba(201,169,110,.2);
+  border-bottom:1px solid rgba(201,169,110,.2);
   padding:28px 48px;
   display:flex;align-items:center;justify-content:space-between;
   gap:20px;flex-wrap:wrap;
@@ -610,8 +612,8 @@ footer small{color:var(--muted);font-size:.75rem}
 .wa-banner-btn{
   display:inline-flex;align-items:center;gap:12px;
   padding:14px 32px;
-  background:#fff;
-  color:#1a7a42;
+  background:linear-gradient(135deg,var(--gold),var(--gold-hi));
+  color:#000;
   border-radius:50px;
   font-weight:800;font-size:.9rem;letter-spacing:.08em;
   white-space:nowrap;
@@ -620,7 +622,7 @@ footer small{color:var(--muted);font-size:.75rem}
   flex-shrink:0;
 }
 .wa-banner-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 14px 30px rgba(0,0,0,.3)}
-.wa-banner-btn svg{width:22px;height:22px;fill:#25d366;flex-shrink:0}
+.wa-banner-btn svg{width:22px;height:22px;fill:#000;flex-shrink:0}
 
 /* ════════════════════════════════════════
    WHATSAPP — CTA INLINE CENTRALIZADO
@@ -633,32 +635,32 @@ footer small{color:var(--muted);font-size:.75rem}
 .btn-wa-inline{
   display:inline-flex;align-items:center;gap:12px;
   padding:18px 40px;
-  background:#25d366;
+  background:linear-gradient(135deg,var(--gold),var(--gold-hi));
   border:1px solid rgba(255,255,255,.15);
   border-radius:50px;
-  color:#fff;
-  font-weight:700;font-size:.95rem;letter-spacing:.08em;
-  box-shadow:0 14px 32px rgba(37,211,102,.45);
+  color:#000;
+  font-weight:800;font-size:.95rem;letter-spacing:.08em;
+  box-shadow:0 14px 32px rgba(201,169,110,.45);
   transition:transform .3s,box-shadow .3s;
   animation:waPulse 2.4s ease infinite;
 }
 .btn-wa-inline:hover{
   transform:translateY(-3px);
-  box-shadow:0 22px 42px rgba(37,211,102,.65);
+  box-shadow:0 22px 42px rgba(201,169,110,.65);
   animation:none;
 }
-.btn-wa-inline svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+.btn-wa-inline svg{width:22px;height:22px;fill:#000;flex-shrink:0}
 
 /* WhatsApp link discreto abaixo do form */
 .wa-form-link{
   display:flex;align-items:center;justify-content:center;gap:8px;
   margin-top:18px;
-  color:#25d366;
+  color:var(--gold);
   font-size:.85rem;font-weight:600;
   opacity:.8;transition:opacity .2s;
 }
 .wa-form-link:hover{opacity:1}
-.wa-form-link svg{width:16px;height:16px;fill:#25d366}
+.wa-form-link svg{width:16px;height:16px;fill:var(--gold)}
 
 /* ════════════════════════════════════════
    KEYFRAMES
@@ -681,9 +683,36 @@ footer small{color:var(--muted);font-size:.75rem}
    RESPONSIVO
 ════════════════════════════════════════ */
 @media(max-width:800px){
+
+  /* Otimização da Foto de Fundo Vertical no Mobile (Letterbox) */
+  .hero-bg {
+    background-image: url('Fotos/Banheiro/mobile_hero_composite.jpeg');
+    background-size: contain;
+    background-position: center 80px; /* Espaço para a logo não misturar com a foto */
+    background-color: var(--obsidian, #080b09);
+    background-repeat: no-repeat;
+  }
+  .hero-overlay {
+    background: none; /* Remove o escurecimento nativo que apaga a foto */
+  }
+  .hero-content {
+    /* A imagem tem proporção ~112.5% da largura. Mais os 80px do topo. Usamos vw para acompanhar perfeitamente o scale. */
+    margin-top: calc(115vw + 80px); 
+  }
+
+
+  /* Otimizações Mobile VLAEG */
+  .hero h1 { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .hero-btns { display: none; } /* Oculta os botões redundantes e cortados no mobile */
+  .btn-primary, .btn-wa-hero { width: 100%; justify-content: center; }
+  .finput { font-size: 16px !important; } /* Anti-Zoom iOS */
+  .trust { flex-direction: column; align-items: center; text-align: center; }
+  .trust-item { justify-content: flex-start; }
+
   .wa-banner{padding:24px;flex-direction:column;text-align:center}
   .btn-wa-hero{padding:14px 22px;font-size:.82rem}
-  .nav{padding:18px 24px}.nav.scrolled{padding:12px 24px}
+  .nav{padding:18px 24px; background: var(--obsidian); border-bottom: 1px solid rgba(201,169,110,.12);}
+  .nav.scrolled{padding:12px 24px;}
   .hero-content{padding:0 24px}
   .section-intro{padding:60px 24px 0}
   .projetos{padding:40px 24px 60px;gap:40px}
@@ -726,7 +755,7 @@ footer small{color:var(--muted);font-size:.75rem}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         Ver Nossos Trabalhos
       </a>
-      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20vidros." target="_blank" rel="noopener" class="btn-wa-hero">
+      <a href="https://wa.me/5591981049299?text=Bom%20dia,%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn-wa-hero">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
         WhatsApp
       </a>
@@ -764,7 +793,7 @@ footer small{color:var(--muted);font-size:.75rem}
     Ficou com dúvida? Chama no WhatsApp.
     <span>A gente responde na hora — sem enrolação.</span>
   </div>
-  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20vidros." target="_blank" rel="noopener" class="wa-banner-btn">
+  <a href="https://wa.me/5591981049299?text=Bom%20dia,%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="wa-banner-btn">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
     Chamar Agora
   </a>
@@ -797,7 +826,7 @@ footer small{color:var(--muted);font-size:.75rem}
 
   <!-- WA inline entre slider 1 e 2 -->
   <div class="wa-cta">
-    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vi%20o%20comparativo%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn-wa-inline">
+    <a href="https://wa.me/5591981049299?text=Bom%20dia,%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn-wa-inline">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
       Quero um Orçamento Grátis
     </a>
@@ -833,6 +862,22 @@ footer small{color:var(--muted);font-size:.75rem}
     </div>
   </div>
 
+
+  <!-- Slider 4: Banheiro -->
+  <div class="projeto-wrap" data-reveal>
+    <div class="ba" id="ba4">
+      <div class="ba-after"><img src="Fotos/Banheiro/depois.jpeg" alt="Depois — Banheiro"></div>
+      <div class="ba-before" id="bef4"><img src="Fotos/Banheiro/antes.jpeg" alt="Antes — Banheiro"></div>
+      <div class="ba-line" id="line4"></div>
+      <div class="ba-btn" id="btn4">&#9668;&nbsp;&#9658;</div>
+      <div class="ba-labels">
+        <span class="lbl-antes">Antes</span>
+        <span class="lbl-depois">Depois</span>
+      </div>
+      <input type="range" class="ba-range" id="range4" min="0" max="100" value="50">
+    </div>
+  </div>
+
 </section>
 
 <!-- ── WA BANNER 2: após os sliders ── -->
@@ -841,7 +886,7 @@ footer small{color:var(--muted);font-size:.75rem}
     Gostou do resultado? Faz sentido pro seu espaço?
     <span>Manda uma mensagem — orçamento sem compromisso.</span>
   </div>
-  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostei%20dos%20trabalhos%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="wa-banner-btn">
+  <a href="https://wa.me/5591981049299?text=Bom%20dia,%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="wa-banner-btn">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
     Pedir Orçamento
   </a>
@@ -865,7 +910,7 @@ footer small{color:var(--muted);font-size:.75rem}
 
 <!-- ── WA CTA após stats ── -->
 <div class="wa-cta">
-  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Boulevard." target="_blank" rel="noopener" class="btn-wa-inline">
+  <a href="https://wa.me/5591981049299?text=Bom%20dia,%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn-wa-inline">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
     Chamar no WhatsApp
   </a>
@@ -997,7 +1042,7 @@ footer small{color:var(--muted);font-size:.75rem}
       <button type="submit" class="fsend" id="fsend">Pedir Orçamento Grátis</button>
       <div class="fb" id="fb"></div>
     </form>
-    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Prefiro%20falar%20pelo%20WhatsApp.%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="wa-form-link">
+    <a href="https://wa.me/5591981049299?text=Bom%20dia,%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="wa-form-link">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
       Prefiro falar pelo WhatsApp
     </a>
@@ -1011,7 +1056,7 @@ footer small{color:var(--muted);font-size:.75rem}
 </footer>
 
 <!-- ── WHATSAPP ── -->
-<a class="wa" href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20de%20restaura%C3%A7%C3%A3o%20de%20vidros." target="_blank" rel="noopener" aria-label="Contato pelo WhatsApp">
+<a class="wa" href="https://wa.me/5591981049299?text=Bom%20dia,%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Contato pelo WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
 </a>
 
@@ -1085,6 +1130,7 @@ function initSlider(n) {
 initSlider(1);
 initSlider(2);
 initSlider(3);
+initSlider(4);
 
 /* ════════════════════════════════════════
    FORMULÁRIO
