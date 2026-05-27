@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boulevard Engenharia | Vidros, Box, Sacada e Mais — Belém do Pará</title>
+  <meta name="description" content="Instalação de vidros, box de banheiro, sacada retrátil, janelas e espelhos em Belém do Pará. 5 anos de experiência, mais de 50 serviços entregues. Peça seu orçamento.">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FACEBOOK PIXEL
+       1. Acesse: business.facebook.com → Events Manager → Pixels
+       2. Copie seu Pixel ID e substitua XXXXXXXXXXXXXXXXXX abaixo
+       3. Descomente o bloco removendo os delimitadores <!-- e -->
+  ═══════════════════════════════════════════════════════════ -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXXXXX'); // ← cole seu Pixel ID aqui
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       GOOGLE ANALYTICS 4 + ADS (gtag.js)
+       1. Acesse: analytics.google.com → Admin → Data Streams
+       2. Copie o Measurement ID (ex: G-XXXXXXXXXX)
+       3. Substitua G-XXXXXXXXXX abaixo e descomente o bloco
+  ═══════════════════════════════════════════════════════════ -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // ← cole seu Measurement ID aqui
+    // Para Google Ads, adicione abaixo:
+    // gtag('config', 'AW-XXXXXXXXXX'); // ← Google Ads Conversion ID
+  </script>
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+/* ════════════════════════════════════════
+   TOKENS & RESET
+════════════════════════════════════════ */
+:root {
+  --obsidian:   #080b09;
+  --carbon:     #0e1410;
+  --g-dark:     #092b18;
+  --g-mid:      #124e2b;
+  --gold:       #c9a96e;
+  --gold-hi:    #d4af37;
+  --white:      #f5f0eb;
+  --muted:      rgba(245,240,235,.6);
+  --font-title: 'Playfair Display', Georgia, serif;
+  --font-body:  'Inter', system-ui, sans-serif;
+  --radius:     12px;
+  --ease-out:   cubic-bezier(0.22,1,0.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--obsidian);
+  color:var(--white);
+  font-family:var(--font-body);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;user-select:none;-webkit-user-drag:none}
+a{text-decoration:none;color:inherit}
+
+/* ════════════════════════════════════════
+   SCROLLBAR PREMIUM
+════════════════════════════════════════ */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--obsidian)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+/* ════════════════════════════════════════
+   HEADER / NAV
+════════════════════════════════════════ */
+.nav{
+  position:fixed;top:0;left:0;width:100%;
+  padding:22px 48px;
+  display:flex;align-items:center;justify-content:space-between;
+  z-index:900;
+  transition:background .4s,backdrop-filter .4s,padding .4s;
+}
+.nav.scrolled{
+  background:rgba(8,11,9,.88);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  padding:14px 48px;
+  border-bottom:1px solid rgba(201,169,110,.12);
+}
+.nav-logo{
+  font-family:var(--font-title);
+  font-size:1.5rem;font-weight:900;
+  letter-spacing:.28em;
+  background:linear-gradient(to right,var(--white),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.nav-cta{
+  padding:10px 28px;
+  border:1px solid var(--gold);
+  border-radius:40px;
+  color:var(--gold);
+  font-size:.82rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;
+  transition:background .25s,color .25s,box-shadow .25s;
+}
+.nav-cta:hover{
+  background:var(--gold);color:var(--obsidian);
+  box-shadow:0 0 24px rgba(212,175,55,.4);
+}
+
+/* ════════════════════════════════════════
+   HERO
+════════════════════════════════════════ */
+.hero{
+  position:relative;
+  width:100%;height:100vh;min-height:600px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('Fotos/Apartamento/depois.jpeg') center/cover no-repeat;
+  transform:scale(1.06);
+  transition:transform 12s ease;
+  will-change:transform;
+}
+.hero-bg.loaded{transform:scale(1)}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(to bottom,rgba(8,11,9,.6) 0%,rgba(8,11,9,.2) 40%,rgba(8,11,9,.75) 100%),
+    linear-gradient(to right,rgba(8,11,9,.55) 0%,transparent 60%);
+}
+.hero-content{
+  position:relative;
+  max-width:700px;
+  padding:0 48px;
+  z-index:1;
+}
+.hero-eyebrow{
+  display:inline-block;
+  font-size:.72rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;
+  color:var(--gold);
+  border:1px solid rgba(201,169,110,.4);
+  border-radius:40px;
+  padding:6px 20px;
+  margin-bottom:28px;
+  opacity:0;
+  animation:fadeUp .8s var(--ease-out) .3s forwards;
+}
+.hero h1{
+  font-family:var(--font-title);
+  font-size:clamp(2.8rem,5vw,4.5rem);
+  font-weight:900;line-height:1.1;
+  margin-bottom:20px;
+  opacity:0;
+  animation:fadeUp .9s var(--ease-out) .5s forwards;
+}
+.hero h1 em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-sub{
+  font-size:1.05rem;font-weight:300;
+  color:var(--muted);
+  line-height:1.65;
+  margin-bottom:40px;
+  max-width:480px;
+  opacity:0;
+  animation:fadeUp .9s var(--ease-out) .7s forwards;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 38px;
+  background:linear-gradient(135deg,var(--g-dark),var(--g-mid));
+  border:1px solid var(--gold);
+  border-radius:50px;
+  color:var(--white);
+  font-weight:700;font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;
+  box-shadow:0 16px 40px rgba(9,43,24,.5),0 0 20px rgba(201,169,110,.15);
+  transition:transform .3s,box-shadow .3s,background .3s;
+  opacity:0;
+  animation:fadeUp .9s var(--ease-out) .9s forwards;
+}
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 24px 50px rgba(9,43,24,.7),0 0 30px rgba(201,169,110,.35);
+  background:linear-gradient(135deg,var(--g-mid),#1a6b3a);
+}
+.btn-primary svg{width:18px;height:18px;flex-shrink:0}
+.hero-scroll{
+  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:var(--muted);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+  animation:fadeUp 1s var(--ease-out) 1.4s both;
+}
+.hero-scroll-line{
+  width:1px;height:48px;
+  background:linear-gradient(to bottom,var(--gold),transparent);
+  animation:scrollPulse 2s ease infinite;
+}
+
+/* ════════════════════════════════════════
+   DIVIDER
+════════════════════════════════════════ */
+.section-intro{
+  padding:80px 48px 0;
+  text-align:center;
+}
+.section-intro .badge{
+  display:inline-block;
+  width:60px;height:2px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+  margin:0 auto 32px;
+}
+.section-intro h2{
+  font-family:var(--font-title);
+  font-size:clamp(1.8rem,3vw,2.8rem);
+  font-weight:900;
+  margin-bottom:16px;
+}
+.section-intro p{
+  color:var(--muted);font-size:.95rem;line-height:1.7;
+  max-width:520px;margin:0 auto;
+}
+
+/* ════════════════════════════════════════
+   BEFORE / AFTER SLIDERS
+════════════════════════════════════════ */
+.projetos{
+  padding:60px 48px 80px;
+  display:flex;flex-direction:column;gap:60px;
+  max-width:1280px;margin:0 auto;
+}
+
+.projeto-wrap{
+  opacity:0;transform:translateY(40px);
+  transition:opacity .7s var(--ease-out),transform .7s var(--ease-out);
+}
+.projeto-wrap.visible{opacity:1;transform:none}
+
+/* O slider */
+.ba{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/7;
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(201,169,110,.15);
+  box-shadow:0 40px 80px rgba(0,0,0,.7);
+  cursor:ew-resize;
+  user-select:none;
+}
+.ba-after,.ba-before{
+  position:absolute;inset:0;width:100%;height:100%;
+}
+.ba-after img,.ba-before img{
+  width:100%;height:100%;object-fit:cover;pointer-events:none;
+}
+/* Antes: clip-path controla quanto aparece */
+.ba-before{clip-path:inset(0 50% 0 0);transition:clip-path 0s}
+
+/* Linha divisória */
+.ba-line{
+  position:absolute;top:0;bottom:0;
+  left:50%;transform:translateX(-50%);
+  width:2px;
+  background:linear-gradient(to bottom,transparent,var(--gold-hi) 20%,var(--gold-hi) 80%,transparent);
+  pointer-events:none;
+  z-index:10;
+  transition:left 0s;
+}
+/* Botão circular no meio da linha */
+.ba-btn{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:52px;height:52px;
+  border-radius:50%;
+  background:var(--obsidian);
+  border:2px solid var(--gold-hi);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold-hi);
+  font-size:.9rem;
+  box-shadow:0 0 30px rgba(212,175,55,.4);
+  z-index:11;
+  transition:transform .2s,box-shadow .2s;
+  pointer-events:none;
+}
+.ba:hover .ba-btn{
+  transform:translate(-50%,-50%) scale(1.1);
+  box-shadow:0 0 40px rgba(212,175,55,.65);
+}
+
+/* Labels ANTES / DEPOIS */
+.ba-labels{
+  position:absolute;
+  bottom:20px;left:0;right:0;
+  display:flex;justify-content:space-between;
+  padding:0 24px;
+  pointer-events:none;
+  z-index:12;
+}
+.ba-labels span{
+  font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  padding:6px 14px;border-radius:40px;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.lbl-antes{background:rgba(8,11,9,.7);border:1px solid rgba(255,255,255,.12);color:rgba(245,240,235,.8)}
+.lbl-depois{background:rgba(9,43,24,.7);border:1px solid rgba(201,169,110,.35);color:var(--gold)}
+
+/* Input range invisível sobre tudo */
+.ba-range{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  opacity:0;cursor:ew-resize;
+  z-index:20;margin:0;
+  -webkit-appearance:none;appearance:none;
+}
+
+
+/* ════════════════════════════════════════
+   TRUST STRIP
+════════════════════════════════════════ */
+.trust{
+  padding:24px 48px;
+  background:rgba(9,43,24,.2);
+  border-top:1px solid rgba(201,169,110,.1);
+  border-bottom:1px solid rgba(201,169,110,.1);
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:32px;
+}
+.trust-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:.82rem;font-weight:600;letter-spacing:.06em;
+  color:var(--muted);
+}
+.trust-item svg{color:var(--gold);flex-shrink:0}
+
+/* ════════════════════════════════════════
+   SERVIÇOS
+════════════════════════════════════════ */
+.servicos{
+  padding:70px 48px;
+  max-width:1100px;margin:0 auto;
+}
+.servicos h2{
+  font-family:var(--font-title);
+  font-size:clamp(1.7rem,2.8vw,2.4rem);
+  font-weight:900;
+  margin-bottom:8px;
+}
+.servicos-sub{
+  color:var(--muted);font-size:.9rem;margin-bottom:48px;line-height:1.6;
+}
+.servicos-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:16px;
+  margin-bottom:32px;
+}
+.srv{
+  background:rgba(14,20,16,.7);
+  border:1px solid rgba(201,169,110,.14);
+  border-radius:12px;
+  padding:22px 20px;
+  display:flex;align-items:flex-start;gap:14px;
+  opacity:0;transform:translateY(20px);
+  transition:opacity .5s var(--ease-out),transform .5s var(--ease-out),border-color .3s,background .3s;
+}
+.srv.visible{opacity:1;transform:none}
+.srv:hover{
+  border-color:rgba(201,169,110,.4);
+  background:rgba(9,43,24,.35);
+}
+.srv-icon{
+  width:38px;height:38px;border-radius:8px;
+  background:linear-gradient(135deg,var(--g-dark),var(--g-mid));
+  border:1px solid rgba(201,169,110,.25);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  color:var(--gold);
+}
+.srv-text{}
+.srv-name{
+  font-size:.88rem;font-weight:700;
+  margin-bottom:3px;
+  color:var(--white);
+}
+.srv-desc{
+  font-size:.75rem;color:var(--muted);line-height:1.4;
+}
+.srv-extra{
+  margin-top:24px;
+  padding:20px 24px;
+  border:1px dashed rgba(201,169,110,.18);
+  border-radius:12px;
+  font-size:.82rem;color:var(--muted);line-height:1.7;
+}
+.srv-extra strong{color:var(--gold);font-weight:600}
+
+/* ════════════════════════════════════════
+   NÚMEROS / STATS
+════════════════════════════════════════ */
+.stats{
+  padding:60px 48px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  max-width:900px;margin:0 auto;
+  border-top:1px solid rgba(201,169,110,.12);
+  border-bottom:1px solid rgba(201,169,110,.12);
+}
+.stat{
+  text-align:center;
+  padding:40px 20px;
+  opacity:0;transform:translateY(20px);
+  transition:opacity .6s var(--ease-out),transform .6s var(--ease-out);
+}
+.stat.visible{opacity:1;transform:none}
+.stat-num{
+  font-family:var(--font-title);
+  font-size:3rem;font-weight:900;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  line-height:1;
+  margin-bottom:8px;
+}
+.stat-label{
+  font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* ════════════════════════════════════════
+   FORMULÁRIO
+════════════════════════════════════════ */
+#contato{
+  padding:80px 48px;
+  display:flex;flex-direction:column;align-items:center;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(18,78,43,.18) 0%,transparent 70%);
+}
+#contato h2{
+  font-family:var(--font-title);
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  font-weight:900;
+  text-align:center;
+  margin-bottom:8px;
+}
+#contato .sub{
+  color:var(--muted);font-size:.9rem;
+  text-align:center;margin-bottom:48px;
+}
+.form-card{
+  width:100%;max-width:520px;
+  background:rgba(14,20,16,.6);
+  border:1px solid rgba(201,169,110,.2);
+  border-radius:20px;
+  padding:48px 44px;
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  box-shadow:0 40px 80px rgba(0,0,0,.5);
+  position:relative;overflow:hidden;
+}
+.form-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,169,110,.06) 0%,transparent 60%);
+  pointer-events:none;
+}
+.fgroup{position:relative;margin-bottom:18px}
+.finput{
+  width:100%;padding:15px 16px 15px 48px;
+  background:rgba(8,11,9,.5);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  color:var(--white);
+  font-family:var(--font-body);font-size:.95rem;
+  outline:none;
+  transition:border-color .3s,box-shadow .3s;
+}
+.finput::placeholder{color:rgba(245,240,235,.35)}
+.finput:focus{border-color:var(--gold-hi);box-shadow:0 0 14px rgba(212,175,55,.2)}
+.ficon{
+  position:absolute;top:50%;left:17px;transform:translateY(-50%);
+  color:var(--muted);transition:color .3s;pointer-events:none;
+}
+.finput:focus~.ficon{color:var(--gold-hi)}
+.fsend{
+  width:100%;padding:18px;
+  background:linear-gradient(135deg,var(--g-dark),var(--g-mid));
+  border:1px solid var(--gold);
+  border-radius:10px;
+  color:var(--white);
+  font-family:var(--font-body);font-size:.95rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  position:relative;overflow:hidden;
+  box-shadow:0 12px 30px rgba(9,43,24,.4);
+  transition:transform .25s,box-shadow .25s;
+  margin-top:4px;
+}
+.fsend:hover{transform:translateY(-2px);box-shadow:0 20px 40px rgba(9,43,24,.65),0 0 20px rgba(201,169,110,.25)}
+.fsend:disabled{opacity:.6;cursor:not-allowed}
+.fb{
+  margin-top:14px;padding:10px;border-radius:8px;
+  font-size:.85rem;font-weight:600;text-align:center;
+  display:none;
+}
+.fb.ok{display:block;background:rgba(9,43,24,.5);border:1px solid #124e2b;color:#55d688}
+.fb.err{display:block;background:rgba(58,15,15,.5);border:1px solid #8c2525;color:#f76e6e}
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+footer{
+  padding:32px 48px;
+  border-top:1px solid rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.foot-logo{
+  font-family:var(--font-title);
+  font-size:1rem;font-weight:900;letter-spacing:.22em;
+  background:linear-gradient(to right,var(--gold-hi),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+footer small{color:var(--muted);font-size:.75rem}
+
+/* ════════════════════════════════════════
+   WHATSAPP — FLUTUANTE
+════════════════════════════════════════ */
+.wa{
+  position:fixed;bottom:36px;right:36px;
+  width:64px;height:64px;
+  background:#25d366;
+  border:2px solid var(--gold-hi);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  z-index:9999;
+  box-shadow:0 12px 35px rgba(37,211,102,.5),0 0 16px rgba(201,169,110,.3);
+  animation:waPulse 2.4s ease infinite;
+  transition:transform .3s,box-shadow .3s;
+}
+.wa:hover{
+  transform:scale(1.12) translateY(-3px);
+  box-shadow:0 20px 45px rgba(37,211,102,.7),0 0 24px rgba(201,169,110,.5);
+  animation:none;
+}
+.wa svg{width:36px;height:36px;fill:#fff}
+
+/* ════════════════════════════════════════
+   WHATSAPP — HERO SECUNDÁRIO
+════════════════════════════════════════ */
+.hero-btns{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.btn-wa-hero{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 30px;
+  background:#25d366;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:50px;
+  color:#fff;
+  font-weight:700;font-size:.88rem;letter-spacing:.08em;
+  box-shadow:0 12px 30px rgba(37,211,102,.4);
+  transition:transform .3s,box-shadow .3s;
+  opacity:0;
+  animation:fadeUp .9s var(--ease-out) 1.05s forwards;
+}
+.btn-wa-hero:hover{
+  transform:translateY(-3px);
+  box-shadow:0 20px 40px rgba(37,211,102,.6);
+}
+.btn-wa-hero svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+
+/* ════════════════════════════════════════
+   WHATSAPP — BANNER INLINE
+   Barra verde de conversão entre seções
+════════════════════════════════════════ */
+.wa-banner{
+  background:linear-gradient(135deg,#1a7a42,#25d366);
+  padding:28px 48px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;
+  opacity:0;transform:translateY(20px);
+  transition:opacity .6s var(--ease-out),transform .6s var(--ease-out);
+}
+.wa-banner.visible{opacity:1;transform:none}
+.wa-banner-text{
+  font-family:var(--font-title);
+  font-size:clamp(1.1rem,2vw,1.5rem);
+  font-weight:700;color:#fff;
+}
+.wa-banner-text span{opacity:.8;font-size:.85em;display:block;font-family:var(--font-body);font-weight:400;margin-top:4px}
+.wa-banner-btn{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:14px 32px;
+  background:#fff;
+  color:#1a7a42;
+  border-radius:50px;
+  font-weight:800;font-size:.9rem;letter-spacing:.08em;
+  white-space:nowrap;
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
+  transition:transform .25s,box-shadow .25s;
+  flex-shrink:0;
+}
+.wa-banner-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 14px 30px rgba(0,0,0,.3)}
+.wa-banner-btn svg{width:22px;height:22px;fill:#25d366;flex-shrink:0}
+
+/* ════════════════════════════════════════
+   WHATSAPP — CTA INLINE CENTRALIZADO
+   Usado abaixo de seções (stats, servicos)
+════════════════════════════════════════ */
+.wa-cta{
+  text-align:center;
+  padding:32px 24px;
+}
+.btn-wa-inline{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:18px 40px;
+  background:#25d366;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:50px;
+  color:#fff;
+  font-weight:700;font-size:.95rem;letter-spacing:.08em;
+  box-shadow:0 14px 32px rgba(37,211,102,.45);
+  transition:transform .3s,box-shadow .3s;
+  animation:waPulse 2.4s ease infinite;
+}
+.btn-wa-inline:hover{
+  transform:translateY(-3px);
+  box-shadow:0 22px 42px rgba(37,211,102,.65);
+  animation:none;
+}
+.btn-wa-inline svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+
+/* WhatsApp link discreto abaixo do form */
+.wa-form-link{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:18px;
+  color:#25d366;
+  font-size:.85rem;font-weight:600;
+  opacity:.8;transition:opacity .2s;
+}
+.wa-form-link:hover{opacity:1}
+.wa-form-link svg{width:16px;height:16px;fill:#25d366}
+
+/* ════════════════════════════════════════
+   KEYFRAMES
+════════════════════════════════════════ */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:none}
+}
+@keyframes scrollPulse{
+  0%,100%{transform:scaleY(1);opacity:.6}
+  50%{transform:scaleY(1.3);opacity:1}
+}
+@keyframes waPulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7),0 0 0 0 rgba(201,169,110,.2)}
+  70%{box-shadow:0 0 0 18px rgba(37,211,102,0),0 0 0 12px rgba(201,169,110,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 0 0 0 rgba(201,169,110,0)}
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVO
+════════════════════════════════════════ */
+@media(max-width:800px){
+  .wa-banner{padding:24px;flex-direction:column;text-align:center}
+  .btn-wa-hero{padding:14px 22px;font-size:.82rem}
+  .nav{padding:18px 24px}.nav.scrolled{padding:12px 24px}
+  .hero-content{padding:0 24px}
+  .section-intro{padding:60px 24px 0}
+  .projetos{padding:40px 24px 60px;gap:40px}
+  .ba{aspect-ratio:4/3}
+  .stats{grid-template-columns:1fr;gap:0}
+  .stat{padding:28px}
+  .trust{padding:20px 24px;gap:20px}
+  .servicos{padding:50px 24px}
+  .servicos-grid{grid-template-columns:1fr 1fr;gap:12px}
+  #contato{padding:60px 24px}
+  .form-card{padding:32px 24px}
+  footer{padding:24px;flex-direction:column;align-items:center;text-align:center}
+  .wa{bottom:24px;right:24px;width:56px;height:56px}
+  .wa svg{width:30px;height:30px}
+}
+@media(max-width:500px){
+  .servicos-grid{grid-template-columns:1fr}
+}
+
+  </style>
+</head>
+<body>
+
+<!-- ── NAVEGAÇÃO ── -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">BOULEVARD</div>
+  <a href="#contato" class="nav-cta">Solicitar Visita</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">5 anos servindo o Pará</div>
+    <h1>Vidro instalado<br><em>com capricho de verdade.</em></h1>
+    <p class="hero-sub">Box de banheiro, sacada retrátil, janelas, espelhos e muito mais. Fino acabamento em cada detalhe — com garantia em todos os serviços.</p>
+    <div class="hero-btns">
+      <a href="#projetos" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Ver Nossos Trabalhos
+      </a>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20vidros." target="_blank" rel="noopener" class="btn-wa-hero">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ── -->
+<div class="trust">
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Garantia em todos os serviços
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    Atendimento rápido no Pará
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    +50 serviços entregues nos últimos 12 meses
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    Equipe própria, sem terceirização
+  </div>
+</div>
+
+<!-- ── WA BANNER 1: logo após o trust strip ── -->
+<div class="wa-banner" data-reveal>
+  <div class="wa-banner-text">
+    Ficou com dúvida? Chama no WhatsApp.
+    <span>A gente responde na hora — sem enrolação.</span>
+  </div>
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20vidros." target="_blank" rel="noopener" class="wa-banner-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    Chamar Agora
+  </a>
+</div>
+
+<!-- ── INTRO ── -->
+<div class="section-intro">
+  <div class="badge"></div>
+  <h2>Veja como a gente trabalha.</h2>
+  <p>Arraste o comparador e veja o resultado real — o mesmo ambiente, antes e depois da nossa mão de obra.</p>
+</div>
+
+<!-- ── PROJETOS: 3 SLIDERS ── -->
+<section id="projetos" class="projetos">
+
+  <!-- Slider 1: Apartamento -->
+  <div class="projeto-wrap" data-reveal>
+    <div class="ba" id="ba1">
+      <div class="ba-after"><img src="Fotos/Apartamento/depois.jpeg" alt="Depois — Apartamento"></div>
+      <div class="ba-before" id="bef1"><img src="Fotos/Apartamento/antes.jpeg" alt="Antes — Apartamento"></div>
+      <div class="ba-line" id="line1"></div>
+      <div class="ba-btn" id="btn1">&#9668;&nbsp;&#9658;</div>
+      <div class="ba-labels">
+        <span class="lbl-antes">Antes</span>
+        <span class="lbl-depois">Depois</span>
+      </div>
+      <input type="range" class="ba-range" id="range1" min="0" max="100" value="50">
+    </div>
+  </div>
+
+  <!-- WA inline entre slider 1 e 2 -->
+  <div class="wa-cta">
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vi%20o%20comparativo%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn-wa-inline">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      Quero um Orçamento Grátis
+    </a>
+  </div>
+
+  <!-- Slider 2: Projeto 2 -->
+  <div class="projeto-wrap" data-reveal>
+    <div class="ba" id="ba2">
+      <div class="ba-after"><img src="Fotos/projeto2_clean-120frames/depois.jpeg" alt="Depois — Projeto 2"></div>
+      <div class="ba-before" id="bef2"><img src="Fotos/projeto2_clean-120frames/antes.jpeg" alt="Antes — Projeto 2"></div>
+      <div class="ba-line" id="line2"></div>
+      <div class="ba-btn" id="btn2">&#9668;&nbsp;&#9658;</div>
+      <div class="ba-labels">
+        <span class="lbl-antes">Antes</span>
+        <span class="lbl-depois">Depois</span>
+      </div>
+      <input type="range" class="ba-range" id="range2" min="0" max="100" value="50">
+    </div>
+  </div>
+
+  <!-- Slider 3: Projeto 1 -->
+  <div class="projeto-wrap" data-reveal>
+    <div class="ba" id="ba3">
+      <div class="ba-after"><img src="Fotos/projeto1_clean-90frames/depois.jpeg" alt="Depois — Projeto 1"></div>
+      <div class="ba-before" id="bef3"><img src="Fotos/projeto1_clean-90frames/antes.jpeg" alt="Antes — Projeto 1"></div>
+      <div class="ba-line" id="line3"></div>
+      <div class="ba-btn" id="btn3">&#9668;&nbsp;&#9658;</div>
+      <div class="ba-labels">
+        <span class="lbl-antes">Antes</span>
+        <span class="lbl-depois">Depois</span>
+      </div>
+      <input type="range" class="ba-range" id="range3" min="0" max="100" value="50">
+    </div>
+  </div>
+
+</section>
+
+<!-- ── WA BANNER 2: após os sliders ── -->
+<div class="wa-banner" data-reveal>
+  <div class="wa-banner-text">
+    Gostou do resultado? Faz sentido pro seu espaço?
+    <span>Manda uma mensagem — orçamento sem compromisso.</span>
+  </div>
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostei%20dos%20trabalhos%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="wa-banner-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    Pedir Orçamento
+  </a>
+</div>
+
+<!-- ── STATS ── -->
+<div class="stats">
+  <div class="stat" data-reveal>
+    <div class="stat-num">+50</div>
+    <div class="stat-label">Serviços nos últimos 12 meses</div>
+  </div>
+  <div class="stat" data-reveal style="transition-delay:.12s">
+    <div class="stat-num">5 anos</div>
+    <div class="stat-label">No mercado paraense</div>
+  </div>
+  <div class="stat" data-reveal style="transition-delay:.24s">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Com garantia no serviço</div>
+  </div>
+</div>
+
+<!-- ── WA CTA após stats ── -->
+<div class="wa-cta">
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Boulevard." target="_blank" rel="noopener" class="btn-wa-inline">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    Chamar no WhatsApp
+  </a>
+</div>
+
+<!-- ── SERVIÇOS ── -->
+<section class="servicos">
+  <h2>O que a gente faz</h2>
+  <p class="servicos-sub">Nosso foco é vidro — e a gente faz bem feito. Do box ao espelho, da sacada à janela.</p>
+
+  <div class="servicos-grid">
+
+    <div class="srv" data-reveal style="transition-delay:.00s">
+      <div class="srv-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+      </div>
+      <div class="srv-text">
+        <div class="srv-name">Box de Banheiro</div>
+        <div class="srv-desc">Temperado, incolor ou fumê. Perfil acabado e silicone selado.</div>
+      </div>
+    </div>
+
+    <div class="srv" data-reveal style="transition-delay:.06s">
+      <div class="srv-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 2 12 5 16"/><polyline points="19 8 22 12 19 16"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+      </div>
+      <div class="srv-text">
+        <div class="srv-name">Sacada Retrátil</div>
+        <div class="srv-desc">Fechamento em vidro temperado — conforto sem perder a vista.</div>
+      </div>
+    </div>
+
+    <div class="srv" data-reveal style="transition-delay:.12s">
+      <div class="srv-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="srv-text">
+        <div class="srv-name">Janelas de Vidro</div>
+        <div class="srv-desc">Temperado ou laminado, em diversas medidas e perfis.</div>
+      </div>
+    </div>
+
+    <div class="srv" data-reveal style="transition-delay:.18s">
+      <div class="srv-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="srv-text">
+        <div class="srv-name">Espelhos</div>
+        <div class="srv-desc">Corte sob medida, bisotê opcional, fixação segura.</div>
+      </div>
+    </div>
+
+    <div class="srv" data-reveal style="transition-delay:.24s">
+      <div class="srv-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="srv-text">
+        <div class="srv-name">Divisórias de Vidro</div>
+        <div class="srv-desc">Ambientes separados sem perder a luz — escritório ou residência.</div>
+      </div>
+    </div>
+
+    <div class="srv" data-reveal style="transition-delay:.30s">
+      <div class="srv-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12m0 0L8 8m4 4l4-4"/><rect x="2" y="2" width="20" height="8" rx="1"/></svg>
+      </div>
+      <div class="srv-text">
+        <div class="srv-name">Portas de Vidro</div>
+        <div class="srv-desc">Pivotante ou correr, com ferragens de qualidade e acabamento caprichado.</div>
+      </div>
+    </div>
+
+    <div class="srv" data-reveal style="transition-delay:.36s">
+      <div class="srv-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      </div>
+      <div class="srv-text">
+        <div class="srv-name">Fachadas em Vidro</div>
+        <div class="srv-desc">Temperado estrutural para comércio e condomínios.</div>
+      </div>
+    </div>
+
+    <div class="srv" data-reveal style="transition-delay:.42s">
+      <div class="srv-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </div>
+      <div class="srv-text">
+        <div class="srv-name">Guarda-corpo</div>
+        <div class="srv-desc">Vidro temperado laminado com fixação por perfil ou grampo.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="srv-extra">
+    <strong>Também fazemos:</strong> instalação de piso, forro e iluminação LED — converse com a gente e veja tudo o que podemos resolver na sua obra.
+  </div>
+</section>
+
+<!-- ── FORMULÁRIO ── -->
+<section id="contato">
+  <h2>Fala com a gente</h2>
+  <p class="sub">Orçamento gratuito. A gente responde rápido.</p>
+  <div class="form-card">
+    <form id="leadForm" novalidate>
+
+      <div class="fgroup">
+        <input type="text" class="finput" id="fn" placeholder="Seu nome" required>
+        <svg class="ficon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+
+      <div class="fgroup">
+        <input type="email" class="finput" id="fe" placeholder="E-mail" required>
+        <svg class="ficon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+
+      <div class="fgroup">
+        <input type="tel" class="finput" id="fp" placeholder="WhatsApp (com DDD)" required>
+        <svg class="ficon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 2H6a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17l.92-.08z"/>
+        </svg>
+      </div>
+
+      <button type="submit" class="fsend" id="fsend">Pedir Orçamento Grátis</button>
+      <div class="fb" id="fb"></div>
+    </form>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Prefiro%20falar%20pelo%20WhatsApp.%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="wa-form-link">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      Prefiro falar pelo WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="foot-logo">BOULEVARD</div>
+  <small>© 2026 Boulevard Engenharia. Todos os direitos reservados.</small>
+</footer>
+
+<!-- ── WHATSAPP ── -->
+<a class="wa" href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20de%20restaura%C3%A7%C3%A3o%20de%20vidros." target="_blank" rel="noopener" aria-label="Contato pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+/* ════════════════════════════════════════
+   NAV SCROLL
+════════════════════════════════════════ */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ════════════════════════════════════════
+   HERO BG — zoom out suave
+════════════════════════════════════════ */
+const heroBg = document.getElementById('heroBg');
+window.addEventListener('load', () => { heroBg.classList.add('loaded'); });
+
+/* ════════════════════════════════════════
+   INTERSECTION OBSERVER — reveal
+════════════════════════════════════════ */
+const reveals = document.querySelectorAll('[data-reveal]');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+reveals.forEach(el => io.observe(el));
+
+/* ════════════════════════════════════════
+   BEFORE / AFTER SLIDERS
+   Suporte a mouse, toque e range nativo
+════════════════════════════════════════ */
+function initSlider(n) {
+  const ba    = document.getElementById('ba' + n);
+  const bef   = document.getElementById('bef' + n);
+  const line  = document.getElementById('line' + n);
+  const btn   = document.getElementById('btn' + n);
+  const range = document.getElementById('range' + n);
+
+  function set(pct) {
+    pct = Math.max(0, Math.min(100, pct));
+    bef.style.clipPath  = `inset(0 ${100 - pct}% 0 0)`;
+    line.style.left     = pct + '%';
+    btn.style.left      = pct + '%';
+    range.value         = pct;
+  }
+
+  /* Range input (teclado + clique direto) */
+  range.addEventListener('input', () => set(+range.value));
+
+  /* Mouse */
+  function fromMouse(e) {
+    const r = ba.getBoundingClientRect();
+    set(((e.clientX - r.left) / r.width) * 100);
+  }
+  let dragging = false;
+  ba.addEventListener('mousedown', (e) => { dragging = true; fromMouse(e); });
+  window.addEventListener('mousemove', (e) => { if (dragging) fromMouse(e); });
+  window.addEventListener('mouseup',  () => { dragging = false; });
+
+  /* Touch */
+  function fromTouch(e) {
+    const r = ba.getBoundingClientRect();
+    set(((e.touches[0].clientX - r.left) / r.width) * 100);
+  }
+  ba.addEventListener('touchstart', fromTouch, { passive: true });
+  ba.addEventListener('touchmove',  fromTouch, { passive: true });
+
+  /* Posição inicial */
+  set(50);
+}
+initSlider(1);
+initSlider(2);
+initSlider(3);
+
+/* ════════════════════════════════════════
+   FORMULÁRIO
+════════════════════════════════════════ */
+const form = document.getElementById('leadForm');
+const fb   = document.getElementById('fb');
+const fsend= document.getElementById('fsend');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  fb.className = 'fb'; fb.style.display = 'none';
+
+  const name  = document.getElementById('fn').value.trim();
+  const email = document.getElementById('fe').value.trim();
+  const phone = document.getElementById('fp').value.trim();
+
+  if (name.length < 2)   return showFb('err', 'Informe seu nome completo.');
+  if (!email.includes('@')) return showFb('err', 'E-mail inválido.');
+  if (phone.length < 8)  return showFb('err', 'Informe um telefone válido.');
+
+  fsend.disabled = true; fsend.textContent = 'Enviando…';
+
+  try {
+    const r = await fetch('/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, phone, timestamp: new Date().toISOString() })
+    });
+    const d = await r.json();
+    if (r.ok && d.success) {
+      showFb('ok', '✓ Mensagem enviada! Entraremos em contato em breve.');
+      form.reset();
+    } else {
+      showFb('err', d.message || 'Erro ao enviar. Tente novamente.');
+    }
+  } catch {
+    showFb('err', 'Erro de conexão. Tente novamente.');
+  } finally {
+    fsend.disabled = false; fsend.textContent = 'Solicitar Visita Gratuita';
+  }
+});
+
+function showFb(cls, msg) {
+  fb.className = 'fb ' + cls;
+  fb.textContent = msg;
+}
+</script>
+</body>
+</html>
