@@ -69,13 +69,18 @@
   --ease-out:   cubic-bezier(0.22,1,0.36,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--obsidian);
-  color:var(--white);
-  font-family:var(--font-body);
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+  background: var(--obsidian);
+  color: var(--white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 img{display:block;max-width:100%;user-select:none;-webkit-user-drag:none}
 a{text-decoration:none;color:inherit}
@@ -685,6 +690,15 @@ footer small{color:var(--muted);font-size:.75rem}
 @media(max-width:800px){
 
   /* Otimização da Foto de Fundo Vertical no Mobile (Letterbox) */
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: visible;
+  }
   .hero-bg {
     background-image: url('Fotos/Banheiro/mobile_hero_composite.jpeg');
     background-size: contain;
@@ -698,6 +712,18 @@ footer small{color:var(--muted);font-size:.75rem}
   .hero-content {
     /* A imagem tem proporção ~112.5% da largura. Mais os 80px do topo. Usamos vw para acompanhar perfeitamente o scale. */
     margin-top: calc(115vw + 80px); 
+    padding-bottom: 60px;
+  }
+  .hero-scroll {
+    display: none !important;
+  }
+  .nav-logo {
+    font-size: 1.15rem;
+    letter-spacing: .15em;
+  }
+  .nav-cta {
+    padding: 8px 18px;
+    font-size: .7rem;
   }
 
 
